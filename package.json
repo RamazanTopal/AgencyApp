@@ -1,0 +1,15 @@
+{
+  "name": "agency-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ramazan Topal",
+  "license": "ISC",
+  "dependencies": {
+    "express-fileupload": "^1.2.1",
+    "method-override": "^3.0.0"
+  }
+}

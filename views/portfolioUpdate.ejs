@@ -1,0 +1,32 @@
+<%-  include('partials/_header.ejs') -%>
+<body id="page-top">
+    <%-  include('partials/_navigation.ejs') -%>
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Product Add</h2>
+            </div>
+           
+                <form method="POST" action="/updatePortfolio/<%= portfolio._id %>?_method=PUT" encType="multipart/form-data">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls">
+                        <input type="text" class="form-control" name="name" placeholder="<%=portfolio.name%>" id="name"  >
+                      </div>
+                    </div>
+                    <div class="control-group mt-3">
+                      <div class="form-group floating-label-form-group controls">
+                        <textarea rows="5" class="form-control" name="description" placeholder="<%=portfolio.description%>" id="description" ></textarea>
+                      </div>
+                    </div>
+                    <div class="control-group mt-3">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="exampleFormControlFile1" class="text-white">Image :</label>
+                            <input type="file" class="form-control-file text-white" id="exampleFormControlFile1" name="image" >
+                        </div>
+                      </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" id="sendMessageButton">Update Portfolio</button>
+                </form>
+        </div>
+    </section>
+<%-  include('partials/_footer.ejs') -%></form>
